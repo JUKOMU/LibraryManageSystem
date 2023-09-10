@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!-- 馆藏书籍展示 -->
+
+<Pane fx:id="display_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="333.0" prefWidth="625.0" style="-fx-background-color: #fef5e5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BookDisplayController">
+   <children>
+      <GridPane fx:id="display_grid" alignment="CENTER" gridLinesVisible="true" layoutY="-1.0" prefHeight="333.0" prefWidth="625.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <VBox fx:id="vbox1" alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <ImageView fx:id="grid_book_view1" fitHeight="115.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" />
+                     </children>
+                  </HBox>
+                  <Label fx:id="book_name1" />
+                  <Label fx:id="book_surplus1" />
+               </children>
+            </VBox>
+            <VBox fx:id="vbox2" alignment="CENTER" GridPane.columnIndex="1">
+               <children>
+                  <HBox alignment="CENTER" GridPane.columnIndex="1">
+                     <children>
+                        <ImageView fx:id="grid_book_view2" fitHeight="115.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" />
+                     </children>
+                  </HBox>
+                  <Label fx:id="book_name2" />
+                  <Label fx:id="book_surplus2" />
+               </children>
+            </VBox>
+            <VBox fx:id="vbox3" alignment="CENTER" GridPane.columnIndex="2">
+               <children>
+                  <HBox alignment="CENTER" GridPane.columnIndex="2">
+                     <children>
+                        <ImageView fx:id="grid_book_view3" fitHeight="115.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
+                     </children>
+                  </HBox>
+                  <Label fx:id="book_name3" />
+                  <Label fx:id="book_surplus3" />
+               </children>
+            </VBox>
+            <VBox fx:id="vbox4" alignment="CENTER" GridPane.columnIndex="3">
+               <children>
+                  <HBox alignment="CENTER" GridPane.columnIndex="3">
+                     <children>
+                        <ImageView fx:id="grid_book_view4" fitHeight="115.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     </children>
+                  </HBox>
+                  <Label fx:id="book_name4" />
+                  <Label fx:id="book_surplus4" />
+               </children>
+            </VBox>
+            <VBox fx:id="vbox5" alignment="CENTER" GridPane.rowIndex="1">
+               <children>
+                  <HBox alignment="CENTER" GridPane.rowIndex="1">
+                     <children>
+                        <ImageView fx:id="grid_book_view5" fitHeight="115.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                     </children>
+                  </HBox>
+                  <Label fx:id="book_name5" />
+                  <Label fx:id="book_surplus5" />
+               </children>
+            </VBox>
+            <VBox fx:id="vbox6" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <HBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <ImageView fx:id="grid_book_view6" fitHeight="115.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                     </children>
+                  </HBox>
+                  <Label fx:id="book_name6" />
+                  <Label fx:id="book_surplus6" />
+               </children>
+            </VBox>
+            <VBox fx:id="vbox7" alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <children>
+                        <ImageView fx:id="grid_book_view7" fitHeight="115.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </HBox>
+                  <Label fx:id="book_name7" />
+                  <Label fx:id="book_surplus7" />
+               </children>
+            </VBox>
+            <VBox fx:id="vbox8" alignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <children>
+                        <ImageView fx:id="grid_book_view8" fitHeight="115.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </HBox>
+                  <Label fx:id="book_name8" />
+                  <Label fx:id="book_surplus8" />
+               </children>
+            </VBox>
+         </children>
+      </GridPane>
+   </children>
+</Pane>

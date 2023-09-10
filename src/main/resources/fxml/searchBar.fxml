@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!-- 搜索框 -->
+
+<Pane fx:id="searchPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="62.5" prefWidth="800.0" style="-fx-background-color: rgba(228,223,212,1);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchBarController">
+   <children>
+      <ImageView fx:id="searchBarImage" fitHeight="62.5" fitWidth="700.0" layoutX="84.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/searchBar-1.png" />
+         </image>
+      </ImageView>
+      <Button id="searchBtn" fx:id="search" focusTraversable="false" layoutX="662.0" layoutY="14.0" mnemonicParsing="false" onAction="#onSearchBooks" prefHeight="36.0" prefWidth="43.0" scaleShape="false" style="-fx-background-color: TRANSPARENT;" textFill="#ff6f0000">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <TextField fx:id="name" focusTraversable="false" layoutX="164.0" layoutY="13.0" prefHeight="36.0" prefWidth="201.0" promptText="书名" style="-fx-background-color: TRANSPARENT; -fx-border-color: TRANSPARENT; -fx-border: TRANSPARENT;" />
+      <TextField fx:id="author" focusTraversable="false" layoutX="440.0" layoutY="14.0" prefHeight="36.0" prefWidth="201.0" promptText="作者" style="-fx-background-color: TRANSPARENT; -fx-border: TRANSPARENT;" />
+   </children>
+</Pane>

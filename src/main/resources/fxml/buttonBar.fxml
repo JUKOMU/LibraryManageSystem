@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!-- 侧边栏按钮 -->
+
+<Pane fx:id="search_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="387.5" prefWidth="153.0" style="-fx-background-color: rgba(175,243,183,0.9);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ButtonBarController">
+   <children>
+      <Button fx:id="book_search" alignment="CENTER" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="-39.0" layoutY="40.0" mnemonicParsing="false" onAction="#onBookSearch" prefHeight="62.5" prefWidth="192.0" scaleShape="false" style="-fx-background-radius: 30px; -fx-background-color: ffc966;" text="      馆藏查询">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <Button fx:id="borrow_renewal" alignment="CENTER" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="-39.0" layoutY="117.0" mnemonicParsing="false" onAction="#onBorrowRenewal" prefHeight="62.5" prefWidth="192.0" scaleShape="false" style="-fx-background-radius: 30px; -fx-background-color: ffc966;" text="      借书/续借">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <Button fx:id="return_book" alignment="CENTER" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="-39.0" layoutY="194.0" mnemonicParsing="false" onAction="#onReturnBook" prefHeight="62.5" prefWidth="192.0" scaleShape="false" style="-fx-background-radius: 30px; -fx-background-color: ffc966;" text="      我要还书">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+
+         </cursor>
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <Button fx:id="my_space" alignment="CENTER" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="-39.0" layoutY="275.0" mnemonicParsing="false" onAction="#onMySpace" prefHeight="62.5" prefWidth="192.0" scaleShape="false" style="-fx-background-radius: 30px; -fx-background-color: ffc966;" text="      个人空间">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

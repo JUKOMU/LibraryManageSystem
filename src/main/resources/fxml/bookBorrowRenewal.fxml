@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!-- 借阅和续借窗口 -->
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="333.0" prefWidth="625.0" style="-fx-background-color: #fef5e5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BookBorrowRenewalController">
+   <children>
+      <VBox layoutX="467.0" prefHeight="333.0" prefWidth="158.0" spacing="10.0">
+         <children>
+            <ImageView fx:id="book_view" fitHeight="126.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </ImageView>
+            <Label text="书名：" />
+            <Label fx:id="book_name" />
+            <Label text="作者：" />
+            <Label fx:id="book_author" />
+         </children>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </VBox>
+      <HBox layoutX="49.0" layoutY="91.0" prefHeight="228.0" prefWidth="325.0" style="-fx-background-radius: 30px;">
+         <children>
+            <ImageView fx:id="camera" fitHeight="242.0" fitWidth="356.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </HBox>
+      <Label fx:id="tip" layoutX="159.0" layoutY="33.0" text="请放置书籍">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
