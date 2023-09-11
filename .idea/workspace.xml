@@ -7,8 +7,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c57b09d-6e38-463c-bc29-f2c4aafdf56e" name="更改" comment="添加书籍和用户的数据库方法">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1c57b09d-6e38-463c-bc29-f2c4aafdf56e" name="更改" comment="更新界面文件，取消窗口自适应方法">
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/mySpace.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/mySpace.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +32,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 4
@@ -52,7 +55,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "E:/Java/LibraryManageSystem/src/main/java/utils",
+    "last_opened_file_path": "E:/Java/LibraryManageSystem/src/main/java",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -67,8 +70,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Java\LibraryManageSystem\src\main\java\utils" />
       <recent name="E:\Java\LibraryManageSystem\src\main\java" />
+      <recent name="E:\Java\LibraryManageSystem\src\main\java\utils" />
       <recent name="E:\Java\LibraryManageSystem" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -89,7 +92,8 @@
       <workItem from="1694354564434" duration="2000" />
       <workItem from="1694354610934" duration="718000" />
       <workItem from="1694355634883" duration="187000" />
-      <workItem from="1694396170787" duration="4026000" />
+      <workItem from="1694396170787" duration="6292000" />
+      <workItem from="1694411886929" duration="489000" />
     </task>
     <task id="LOCAL-00001" summary="upload">
       <option name="closed" value="true" />
@@ -195,7 +199,23 @@
       <option name="project" value="LOCAL" />
       <updated>1694399935493</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="改变代码排列">
+      <option name="closed" value="true" />
+      <created>1694400329926</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1694400329926</updated>
+    </task>
+    <task id="LOCAL-00015" summary="更新界面文件，取消窗口自适应方法">
+      <option name="closed" value="true" />
+      <created>1694401314895</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1694401314895</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,6 +240,8 @@
     <MESSAGE value="定义了用户的实体类" />
     <MESSAGE value="更新依赖" />
     <MESSAGE value="添加书籍和用户的数据库方法" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加书籍和用户的数据库方法" />
+    <MESSAGE value="改变代码排列" />
+    <MESSAGE value="更新界面文件，取消窗口自适应方法" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新界面文件，取消窗口自适应方法" />
   </component>
 </project>

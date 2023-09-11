@@ -12,7 +12,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="LibraryManageSystem" options="--add-exports java.datatransfer/java.awt=LibraryManageSystem" />
+      <module name="LibraryManageSystem" options="" />
     </option>
   </component>
 </project>
