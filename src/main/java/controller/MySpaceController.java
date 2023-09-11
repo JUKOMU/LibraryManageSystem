@@ -1,6 +1,5 @@
 package controller;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -10,19 +9,14 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
-import javafx.scene.text.Font;
-import javafx.stage.Stage;
 import service.UserService;
 import service.impl.UserServiceImpl;
 import utils.Result;
-
-import javax.security.auth.login.LoginException;
 
 public class MySpaceController {
 
@@ -70,7 +64,7 @@ public class MySpaceController {
         UserService userService = new UserServiceImpl();
 
         User user = new User();
-        user.setUsername(name);
+        user.setUser_name(name);
         user.setPassword(pwd);
 
         try {
@@ -94,7 +88,6 @@ public class MySpaceController {
             errorinfo.setStyle("-fx-text-fill: red");
             //设置可见
             errorinfo.setVisible(true);
-            return;
         }
     }
 

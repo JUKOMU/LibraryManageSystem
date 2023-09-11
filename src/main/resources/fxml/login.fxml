@@ -21,10 +21,10 @@
          <font>
             <Font size="34.0" />
          </font></TextField>
-      <TextField fx:id="pwd" focusTraversable="false" layoutX="321.0" layoutY="353.0" prefHeight="73.0" prefWidth="497.0" promptText="密码" style="-fx-background-radius: 15px; -fx-background-color: rgba(209,225,152,1);">
+      <PasswordField fx:id="pwd" focusTraversable="false" layoutX="321.0" layoutY="353.0" prefHeight="73.0" prefWidth="497.0" promptText="密码" style="-fx-background-radius: 15px; -fx-background-color: rgba(209,225,152,1);">
          <font>
             <Font size="34.0" />
-         </font></TextField>
+         </font></PasswordField>
       <Button fx:id="login_btn" layoutX="484.0" layoutY="440.0" mnemonicParsing="false" onAction="#login" prefHeight="34.0" prefWidth="150.0" style="-fx-background-color: #4cc9eb; -fx-background-radius: 30px;" text="登录" textFill="WHITE">
          <font>
             <Font size="33.0" />

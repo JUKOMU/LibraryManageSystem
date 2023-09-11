@@ -1,52 +1,51 @@
 package domain;
 
-import java.awt.*;
-
 /**
  * 用户实体类
  */
 public class User {
     public static final int ADMINISTRATOR = 0; // 管理员账号为0
     public static final int NORMAL_USER = 1;   // 普通用户为1
-    private String username;
+    private int id;
+    private String user_name;
     private String password;
-    private Image userFaceImage; // 用户人脸信息
-    private int userRole;        // 用户权限
-    private int borrowedCount;  // 总借阅次数
-    private int currentBorrowedBooks;   // 正在借阅的书籍数量
+    private String user_face_image; // 用户人脸信息
+    private int user_role;        // 用户权限
+    private int borrowed_count;  // 总借阅次数
+    private int current_borrowed_books;   // 正在借阅的书籍数量
     public User() {
     }
-    public User(String username, String password, Image userFaceImage, int userRole, int borrowedCount, int currentBorrowedBooks) {
-        this.username = username;
+    public User(String username, String password, String userFaceImage, int userRole, int borrowedCount, int currentBorrowedBooks) {
+        this.user_name = username;
         this.password = password;
-        this.userFaceImage = userFaceImage;
-        this.userRole = userRole;
-        this.borrowedCount = borrowedCount;
-        this.currentBorrowedBooks = currentBorrowedBooks;
+        this.user_face_image = userFaceImage;
+        this.user_role = userRole;
+        this.borrowed_count = borrowedCount;
+        this.current_borrowed_books = currentBorrowedBooks;
     }
 
-    public int getBorrowedCount() {
-        return borrowedCount;
+    public int getBorrowed_count() {
+        return borrowed_count;
     }
 
-    public void setBorrowedCount(int borrowedCount) {
-        this.borrowedCount = borrowedCount;
+    public void setBorrowed_count(int borrowed_count) {
+        this.borrowed_count = borrowed_count;
     }
 
-    public int getCurrentBorrowedBooks() {
-        return currentBorrowedBooks;
+    public int getCurrent_borrowed_books() {
+        return current_borrowed_books;
     }
 
-    public void setCurrentBorrowedBooks(int currentBorrowedBooks) {
-        this.currentBorrowedBooks = currentBorrowedBooks;
+    public void setCurrent_borrowed_books(int current_borrowed_books) {
+        this.current_borrowed_books = current_borrowed_books;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUser_name() {
+        return user_name;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUser_name(String user_name) {
+        this.user_name = user_name;
     }
 
     public String getPassword() {
@@ -57,31 +56,31 @@ public class User {
         this.password = password;
     }
 
-    public Image getUserFaceImage() {
-        return userFaceImage;
+    public String getUserFaceImage() {
+        return user_face_image;
     }
 
-    public void setUserFaceImage(Image userFaceImage) {
-        this.userFaceImage = userFaceImage;
+    public void setUserFaceImage(String userFaceImage) {
+        this.user_face_image = userFaceImage;
     }
 
-    public int getUserRole() {
-        return userRole;
+    public int getUser_role() {
+        return user_role;
     }
 
-    public void setUserRole(int userRole) {
-        this.userRole = userRole;
+    public void setUser_role(int user_role) {
+        this.user_role = user_role;
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "username='" + username + '\'' +
+                "username='" + user_name + '\'' +
                 ", password='" + password + '\'' +
-                ", userFaceImage=" + userFaceImage +
-                ", userRole=" + userRole +
-                ", borrowedCount=" + borrowedCount +
-                ", currentBorrowedBooks=" + currentBorrowedBooks +
+                ", userFaceImage=" + user_face_image +
+                ", userRole=" + user_role +
+                ", borrowedCount=" + borrowed_count +
+                ", currentBorrowedBooks=" + current_borrowed_books +
                 '}';
     }
 }

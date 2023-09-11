@@ -6,14 +6,13 @@ import domain.User;
 import service.UserService;
 import utils.Result;
 
-import javax.security.auth.login.LoginException;
-
 public class UserServiceImpl implements UserService {
     //定义dao对象，调用dao中查询方法
     private UserDao userDao=new UserDaoImpl();
     @Override
     public Result login(User user) {
-        User user1=userDao.selectUserByUsernameAndPassword(user.getUsername(),user.getPassword());
+        User user1=userDao.selectUserByUsernameAndPassword(user.getUser_name(),user.getPassword());
+        System.out.println(user.getUser_name()+" "+user1.getPassword());
         //产生result对象
         Result result=new Result();
         //判断一下user1 是否为空

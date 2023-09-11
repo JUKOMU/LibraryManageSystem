@@ -142,21 +142,22 @@ public class DataSourceUtils {
         return executeQueryList(sql,c,params).size()==0?null:executeQueryList(sql,c,params).get(0);
     }
 
-    public static void close(Connection conn,PreparedStatement pstmt,ResultSet rs) {
+    public static void close(Connection conn, PreparedStatement pstmt, ResultSet rs) {
         try {
             if (conn != null) {
                 conn.close();
             }
             if (pstmt != null) {
-                conn.close();
+                pstmt.close();
             }
             if (rs != null) {
-                conn.close();
+                rs.close();
             }
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
 
     /**
      * 修改:可以执行添加、删除、修改单条操作
