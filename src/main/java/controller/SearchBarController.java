@@ -49,30 +49,6 @@ public class SearchBarController {
         assert searchBarImage != null : "fx:id=\"searchBarImage\" was not injected: check your FXML file 'searchBar.fxml'.";
         assert name != null : "fx:id=\"name\" was not injected: check your FXML file 'searchBar.fxml'.";
 
-
-        // 初始化时监听窗口大小变化
-        searchPane.widthProperty().addListener((observable, oldValue, newValue) -> {
-            // 调整组件的宽度
-            double scale = newValue.doubleValue() / 800.0; // 800是初始宽度
-            searchBarImage.setFitWidth(700.0 * scale);
-            search.setPrefWidth(43.0 * scale);
-            name.setPrefWidth(201.0 * scale);
-            author.setPrefWidth(201.0 * scale);
-
-            // 调整字体大小
-            double fontSize = 14.0 * scale; // 14.0是初始字体大小
-            name.setStyle("-fx-font-size: " + fontSize + "px;");
-            author.setStyle("-fx-font-size: " + fontSize + "px;");
-        });
-
-        searchPane.heightProperty().addListener((observable, oldValue, newValue) -> {
-            // 调整组件的高度
-            double scale = newValue.doubleValue() / 62.5; // 62.5是初始高度
-            searchBarImage.setFitHeight(62.5 * scale);
-            search.setPrefHeight(36.0 * scale);
-            name.setPrefHeight(36.0 * scale);
-            author.setPrefHeight(36.0 * scale);
-        });
         ControllerManager.controllers.put("searchBarController",this );
     }
 }

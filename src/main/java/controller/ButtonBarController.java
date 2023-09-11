@@ -77,33 +77,7 @@ public class ButtonBarController {
         assert book_search != null : "fx:id=\"book_search\" was not injected: check your FXML file 'buttonBar.fxml'.";
         assert return_book != null : "fx:id=\"return_book\" was not injected: check your FXML file 'buttonBar.fxml'.";
 
-        // 初始化时监听窗口大小变化
-        search_pane.widthProperty().addListener((observable, oldValue, newValue) -> {
-            double scale = newValue.doubleValue() / 153.0; // 153.0是初始宽度
 
-            // 调整按钮的宽度
-            book_search.setPrefWidth(192.0 * scale);
-            borrow_renewal.setPrefWidth(192.0 * scale);
-            return_book.setPrefWidth(192.0 * scale);
-            my_space.setPrefWidth(192.0 * scale);
-
-            // 调整字体大小
-            double fontSize = 25.0 * scale; // 25.0是初始字体大小
-            book_search.setFont(new Font(fontSize));
-            borrow_renewal.setFont(new Font(fontSize));
-            return_book.setFont(new Font(fontSize));
-            my_space.setFont(new Font(fontSize));
-        });
-
-        search_pane.heightProperty().addListener((observable, oldValue, newValue) -> {
-            double scale = newValue.doubleValue() / 387.5; // 387.5是初始高度
-
-            // 调整按钮的高度
-            book_search.setPrefHeight(62.5 * scale);
-            borrow_renewal.setPrefHeight(62.5 * scale);
-            return_book.setPrefHeight(62.5 * scale);
-            my_space.setPrefHeight(62.5 * scale);
-        });
         ControllerManager.controllers.put("buttonBarController",this );
     }
 }

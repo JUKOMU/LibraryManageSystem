@@ -212,46 +212,6 @@ public class BookDisplayController {
         book_surplus[7] = book_surplus8;
 
 
-        // 初始化时监听窗口大小变化
-        Stage stage = (Stage) display_pane.getScene().getWindow();
-
-        stage.widthProperty().addListener((observable, oldValue, newValue) -> {
-            double scaleX = newValue.doubleValue() / 625.0; // 625.0是初始宽度
-
-            // 调整容器的宽度
-            for (VBox box : vbox) {
-                box.setPrefWidth(200.0 * scaleX);
-            }
-
-            // 调整图片的宽度
-            for (ImageView imageView : grid_book_view) {
-                imageView.setFitWidth(99.0 * scaleX);
-            }
-
-            // 调整字体大小
-            double fontSize = 25.0 * scaleX; // 25.0是初始字体大小
-            for (Label label : book_name) {
-                label.setFont(new Font(fontSize));
-            }
-            for (Label label : book_surplus) {
-                label.setFont(new Font(fontSize));
-            }
-        });
-
-        stage.heightProperty().addListener((observable, oldValue, newValue) -> {
-            double scaleY = newValue.doubleValue() / 333.0; // 333.0是初始高度
-
-            // 调整容器的高度
-            for (VBox box : vbox) {
-                box.setPrefHeight(100.0 * scaleY);
-            }
-
-            // 调整图片的高度
-            for (ImageView imageView : grid_book_view) {
-                imageView.setFitHeight(115.0 * scaleY);
-            }
-        });
-
         ControllerManager.controllers.put("bookDisplayController",this );
     }
 }
