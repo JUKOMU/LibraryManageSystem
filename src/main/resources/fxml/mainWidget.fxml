@@ -15,10 +15,13 @@
             <HBox prefHeight="761.0" prefWidth="1500.0">
                <children>
                   <fx:include source="buttonBar.fxml" />
-                  <HBox prefHeight="755.0" prefWidth="1364.0">
+                  <HBox fx:id="main_hbox" prefHeight="727.0" prefWidth="1238.0">
                      <padding>
-                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                        <Insets bottom="20.0" left="40.0" right="20.0" top="40.0" />
                      </padding>
+                     <children>
+                        <fx:include source="bookBorrowRenewal.fxml" />
+                     </children>
                   </HBox>
                </children></HBox>
          </children>

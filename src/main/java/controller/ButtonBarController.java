@@ -1,10 +1,14 @@
 package controller;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
@@ -43,12 +47,14 @@ public class ButtonBarController {
     }
 
     @FXML
-    void onBorrowRenewal(ActionEvent event) {
+    void onBorrowRenewal(ActionEvent event) throws IOException {
         book_search.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:50px");
         borrow_renewal.setStyle("-fx-background-color:#ffa500;-fx-background-radius:50px;");
         return_book.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:50px");
         my_space.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:50px");
-
+        String FXMLurl = "E:\\Java\\LibraryManageSystem\\src\\main\\resources\\fxml\\bookBorrowRenewal.fxml";
+        MainController mainController = (MainController) ControllerManager.controllers.get("mainController");
+        mainController.addFXMLResource(FXMLurl);
     }
 
     @FXML

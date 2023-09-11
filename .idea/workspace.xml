@@ -8,24 +8,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c57b09d-6e38-463c-bc29-f2c4aafdf56e" name="更改" comment="upload">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/camera/CameraCaptureApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/camera/CameraCaptureApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/BookBorrowRenewalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/BookBorrowRenewalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ButtonBarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ButtonBarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/DataSourceUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/DataSourceUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/MainApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/BookDisplayController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/ButtonBarController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/ControllerManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/MainController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/MySpaceController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/SearchBarController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/bookBorrowRenewal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/bookBorrowRenewal.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/buttonBar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/buttonBar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/bookBorrowRenewal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/bookBorrowRenewal.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/mainWidget.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/mainWidget.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/camera/CameraCaptureApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/camera/CameraCaptureApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/BookBorrowRenewalController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/BookBorrowRenewalController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/ButtonBarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/ButtonBarController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/MainController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fxml/mainWidget.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/mainWidget.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/mySpace.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/mySpace.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/searchBar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/searchBar.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/功能结构表.xls" beforeDir="false" afterPath="$PROJECT_DIR$/功能结构表.xls" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +118,7 @@
       <workItem from="1694411886929" duration="489000" />
       <workItem from="1694412733433" duration="1937000" />
       <workItem from="1694414732092" duration="539000" />
-      <workItem from="1694415283074" duration="2867000" />
+      <workItem from="1694415283074" duration="6556000" />
     </task>
     <task id="LOCAL-00001" summary="upload">
       <option name="closed" value="true" />
@@ -283,7 +280,23 @@
       <option name="project" value="LOCAL" />
       <updated>1694415314305</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="upload">
+      <option name="closed" value="true" />
+      <created>1694418859060</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1694418859060</updated>
+    </task>
+    <task id="LOCAL-00022" summary="upload">
+      <option name="closed" value="true" />
+      <created>1694418921797</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1694418921797</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

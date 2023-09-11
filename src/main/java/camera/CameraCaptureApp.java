@@ -1,16 +1,9 @@
 package camera;
 
-import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.embed.swing.SwingFXUtils;
-import javafx.geometry.Pos;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
-import javafx.stage.Stage;
 import org.bytedeco.javacv.Frame;
 import org.bytedeco.javacv.FrameGrabber;
 import org.bytedeco.javacv.Java2DFrameConverter;
@@ -21,17 +14,18 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class CameraCaptureApp extends Application {
+public class CameraCaptureApp {
 
     private FrameGrabber grabber;
     private Java2DFrameConverter converter;
     private ImageView imageView;
     private volatile boolean capturing = false;
 
-    public static void main(String[] args) {
-        launch(args);
-    }
+    //public static void main(String[] args) {
+        //launch(args);
+   // }
 
+    /*
     @Override
     public void start(Stage primaryStage) {
         BorderPane root = new BorderPane();
@@ -60,8 +54,11 @@ public class CameraCaptureApp extends Application {
         primaryStage.show();
     }
 
+     */
+
     private void startCapture() {
         try {
+
             grabber = new OpenCVFrameGrabber(0); // 0 表示默认摄像头
             grabber.start();
 
