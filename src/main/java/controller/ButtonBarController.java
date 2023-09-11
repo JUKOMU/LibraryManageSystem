@@ -103,11 +103,12 @@ public class ButtonBarController {
             MainController mainController = (MainController) ControllerManager.controllers.get("mainController");
             HBox mainHbox = mainController.getMain_hbox();
             mainHbox.getChildren().clear();
+            mainHbox.getChildren().add(node);
         }
     }
 
     @FXML
-    void onMySpace(ActionEvent event) {
+    void onMySpace(ActionEvent event) throws IOException {
         if (!isON[3]) {
             for (int i = 0; i < 4;i++) {
                 isON[i] = false;
@@ -117,9 +118,14 @@ public class ButtonBarController {
             borrow_renewal.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:50px");
             return_book.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:50px");
             my_space.setStyle("-fx-background-color:#ffa500;-fx-background-radius:50px;");
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/login.fxml"));
+            Node node = loader.load();
+
             MainController mainController = (MainController) ControllerManager.controllers.get("mainController");
             HBox mainHbox = mainController.getMain_hbox();
             mainHbox.getChildren().clear();
+            mainHbox.getChildren().addAll(node);
         }
     }
 

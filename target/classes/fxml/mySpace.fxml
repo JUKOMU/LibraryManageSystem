@@ -1,49 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.text.*?>
-<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<!-- 个人空间 -->
-
-<Pane fx:id="login_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="1172.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MySpaceController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="1172.0" style="-fx-background-color: #fef5e5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fitHeight="690.0" fitWidth="1172.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../img/MySpaceBackground.png" />
-         </image>
-      </ImageView>
-      <TextField fx:id="name" focusTraversable="false" layoutX="321.0" layoutY="239.0" prefHeight="73.0" prefWidth="497.0" promptText="账号" style="-fx-background-radius: 15px; -fx-background-color: rgba(209,225,152,1);">
+      <Label fx:id="title" layoutX="155.0" layoutY="67.0">
          <font>
             <Font size="34.0" />
-         </font></TextField>
-      <TextField fx:id="pwd" focusTraversable="false" layoutX="321.0" layoutY="353.0" prefHeight="73.0" prefWidth="497.0" promptText="密码" style="-fx-background-radius: 15px; -fx-background-color: rgba(209,225,152,1);">
-         <font>
-            <Font size="34.0" />
-         </font></TextField>
-      <Button fx:id="login_btn" layoutX="484.0" layoutY="440.0" mnemonicParsing="false" onAction="#login" prefHeight="34.0" prefWidth="150.0" style="-fx-background-color: #4cc9eb; -fx-background-radius: 30px;" text="登录" textFill="WHITE">
-         <font>
-            <Font size="33.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Button>
-      <Label fx:id="tip_register1" layoutX="227.0" layoutY="505.0" text="还没有账号，去">
-         <font>
-            <Font size="11.0" />
          </font>
       </Label>
-      <Label fx:id="tip_register2" layoutX="310.0" layoutY="528.0" onMouseClicked="#register" text="注册" textFill="#0094ff">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
+      <Label layoutX="165.0" layoutY="191.0" text="正在借阅的图书数：">
          <font>
-            <Font size="11.0" />
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="borrowedCount" layoutX="417.0" layoutY="191.0">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="165.0" layoutY="324.0" text="总借阅次数：">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalCount" layoutX="333.0" layoutY="324.0">
+         <font>
+            <Font size="28.0" />
          </font>
       </Label>
    </children>
