@@ -7,9 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c57b09d-6e38-463c-bc29-f2c4aafdf56e" name="更改" comment="更新界面文件，取消窗口自适应方法">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/mySpace.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/mySpace.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="1c57b09d-6e38-463c-bc29-f2c4aafdf56e" name="更改" comment="摄像头部分" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,7 +62,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "settings.editor.selected.configurable": "vcs.Git",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -94,6 +92,7 @@
       <workItem from="1694355634883" duration="187000" />
       <workItem from="1694396170787" duration="6292000" />
       <workItem from="1694411886929" duration="489000" />
+      <workItem from="1694412733433" duration="448000" />
     </task>
     <task id="LOCAL-00001" summary="upload">
       <option name="closed" value="true" />
@@ -215,7 +214,31 @@
       <option name="project" value="LOCAL" />
       <updated>1694401314895</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="更新JavaCV和条形码的依赖">
+      <option name="closed" value="true" />
+      <created>1694412875439</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1694412875439</updated>
+    </task>
+    <task id="LOCAL-00017" summary="条形码类">
+      <option name="closed" value="true" />
+      <created>1694412896521</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1694412896521</updated>
+    </task>
+    <task id="LOCAL-00018" summary="摄像头部分">
+      <option name="closed" value="true" />
+      <created>1694412914394</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1694412914394</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,6 +265,9 @@
     <MESSAGE value="添加书籍和用户的数据库方法" />
     <MESSAGE value="改变代码排列" />
     <MESSAGE value="更新界面文件，取消窗口自适应方法" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新界面文件，取消窗口自适应方法" />
+    <MESSAGE value="更新JavaCV和条形码的依赖" />
+    <MESSAGE value="条形码类" />
+    <MESSAGE value="摄像头部分" />
+    <option name="LAST_COMMIT_MESSAGE" value="摄像头部分" />
   </component>
 </project>
