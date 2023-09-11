@@ -22,4 +22,6 @@ public interface BookDao {
      * 根据书名和作者联合检索
      */
     List<Book> selectBookByNameByAuthor(String name,String author);
+
+    List<Book> selectAllBook();
 }

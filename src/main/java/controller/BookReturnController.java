@@ -11,18 +11,24 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import org.bytedeco.javacv.Frame;
+import org.bytedeco.javacv.FrameGrabber;
 import org.bytedeco.javacv.Java2DFrameConverter;
 import org.bytedeco.javacv.OpenCVFrameGrabber;
-import org.bytedeco.javacv.FrameGrabber;
 
-
-public class BookBorrowRenewalController {
+public class BookReturnController {
 
     @FXML
     private ResourceBundle resources;
 
+    public void setCapturing(boolean capturing) {
+        this.capturing = capturing;
+    }
+
     @FXML
     private URL location;
+
+    @FXML
+    private ImageView camera_return;
 
     @FXML
     private ImageView book_view;
@@ -31,31 +37,23 @@ public class BookBorrowRenewalController {
     private Label book_author;
 
     @FXML
-    private Label tip;
-
-    @FXML
     private Label book_name;
 
-    public void setCapturing(boolean capturing) {
-        this.capturing = capturing;
-    }
-
     @FXML
-    private ImageView camera;
+    private Label tip_return;
 
     private FrameGrabber grabber;
     private Java2DFrameConverter converter;
 
-    private boolean capturing = true;
+    private boolean capturing = false;
 
     @FXML
     void initialize() {
-        assert book_view != null : "fx:id=\"book_view\" was not injected: check your FXML file 'bookBorrowRenewal.fxml'.";
-        assert book_author != null : "fx:id=\"book_author\" was not injected: check your FXML file 'bookBorrowRenewal.fxml'.";
-        assert tip != null : "fx:id=\"tip\" was not injected: check your FXML file 'bookBorrowRenewal.fxml'.";
-        assert book_name != null : "fx:id=\"book_name\" was not injected: check your FXML file 'bookBorrowRenewal.fxml'.";
-        assert camera != null : "fx:id=\"camera\" was not injected: check your FXML file 'bookBorrowRenewal.fxml'.";
-
+        assert camera_return != null : "fx:id=\"camera_return\" was not injected: check your FXML file 'bookReturn.fxml'.";
+        assert book_view != null : "fx:id=\"book_view\" was not injected: check your FXML file 'bookReturn.fxml'.";
+        assert book_author != null : "fx:id=\"book_author\" was not injected: check your FXML file 'bookReturn.fxml'.";
+        assert book_name != null : "fx:id=\"book_name\" was not injected: check your FXML file 'bookReturn.fxml'.";
+        assert tip_return != null : "fx:id=\"tip_return\" was not injected: check your FXML file 'bookReturn.fxml'.";
 
         try {
 
@@ -73,7 +71,7 @@ public class BookBorrowRenewalController {
                         if (frame != null) {
                             BufferedImage bufferedImage = converter.convert(frame);
                             Image image = SwingFXUtils.toFXImage(bufferedImage, null);
-                            Platform.runLater(() -> camera.setImage(image));
+                            Platform.runLater(() -> camera_return.setImage(image));
                         }
                     }
                 } catch (Exception e) {
@@ -85,6 +83,6 @@ public class BookBorrowRenewalController {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        ControllerManager.controllers.put("bookBorrowRenewalController",this);
+        ControllerManager.controllers.put("bookReturnController",this);
     }
 }

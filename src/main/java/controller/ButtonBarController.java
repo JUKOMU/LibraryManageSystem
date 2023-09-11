@@ -70,6 +70,10 @@ public class ButtonBarController {
                 isON[i] = false;
             }
             isON[1] = true;
+
+            BookReturnController bookReturnController = (BookReturnController) ControllerManager.controllers.get("bookReturnController");
+            bookReturnController.setCapturing(false);
+
             book_search.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:50px");
             borrow_renewal.setStyle("-fx-background-color:#ffa500;-fx-background-radius:50px;");
             return_book.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:50px");
@@ -92,6 +96,10 @@ public class ButtonBarController {
                 isON[i] = false;
             }
             isON[2] = true;
+
+            BookBorrowRenewalController bookBorrowRenewalController = (BookBorrowRenewalController) ControllerManager.controllers.get("bookBorrowRenewalController");
+            bookBorrowRenewalController.setCapturing(false);
+
             book_search.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:50px");
             borrow_renewal.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:50px");
             return_book.setStyle("-fx-background-color:#ffa500;-fx-background-radius:50px;");
