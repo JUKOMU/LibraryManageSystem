@@ -8,21 +8,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c57b09d-6e38-463c-bc29-f2c4aafdf56e" name="更改" comment="upload">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/bookReturn.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/camera/CameraCaptureApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/camera/CameraCaptureApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/BookBorrowRenewalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/BookBorrowRenewalController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/ButtonBarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ButtonBarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/bookBorrowRenewal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/bookBorrowRenewal.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/mainWidget.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/mainWidget.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/camera/CameraCaptureApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/camera/CameraCaptureApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/BookBorrowRenewalController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/BookBorrowRenewalController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controller/ButtonBarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/ButtonBarController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/MainController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fxml/mainWidget.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/mainWidget.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/功能结构表.xls" beforeDir="false" afterPath="$PROJECT_DIR$/功能结构表.xls" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +67,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "E:/Java/LibraryManageSystem/src/main/resources",
+    "last_opened_file_path": "E:/Java/LibraryManageSystem/src/main/resources/fxml",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -91,6 +82,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Java\LibraryManageSystem\src\main\resources\fxml" />
       <recent name="E:\Java\LibraryManageSystem\src\main\resources" />
       <recent name="E:\Java\LibraryManageSystem\src\main\java" />
       <recent name="E:\Java\LibraryManageSystem\src\main\java\utils" />
@@ -118,7 +110,7 @@
       <workItem from="1694411886929" duration="489000" />
       <workItem from="1694412733433" duration="1937000" />
       <workItem from="1694414732092" duration="539000" />
-      <workItem from="1694415283074" duration="6556000" />
+      <workItem from="1694415283074" duration="9682000" />
     </task>
     <task id="LOCAL-00001" summary="upload">
       <option name="closed" value="true" />
@@ -296,7 +288,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694418921797</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="upload">
+      <option name="closed" value="true" />
+      <created>1694422215257</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1694422215257</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
