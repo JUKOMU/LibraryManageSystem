@@ -9,4 +9,5 @@ open module LibraryManageSystem {
     requires com.google.zxing.javase;
     requires org.bytedeco.javacv;
     requires javafx.swing;
+    requires webcam.capture;
 }
