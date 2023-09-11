@@ -10,29 +10,35 @@
 
 <!-- 个人空间 -->
 
-<Pane fx:id="login_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="333.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MySpaceController">
+<Pane fx:id="login_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="1172.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MySpaceController">
    <children>
-      <ImageView fitHeight="369.0" fitWidth="625.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="690.0" fitWidth="1172.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/MySpaceBackground.png" />
          </image>
       </ImageView>
-      <TextField fx:id="name" focusTraversable="false" layoutX="171.0" layoutY="128.0" prefHeight="39.0" prefWidth="265.0" promptText="账号" style="-fx-background-radius: 15px; -fx-background-color: rgba(209,225,152,1);" />
-      <TextField fx:id="pwd" focusTraversable="false" layoutX="171.0" layoutY="191.0" prefHeight="39.0" prefWidth="265.0" promptText="密码" style="-fx-background-radius: 15px; -fx-background-color: rgba(209,225,152,1);" />
-      <Button fx:id="login_btn" layoutX="229.0" layoutY="251.0" mnemonicParsing="false" onAction="#login" prefHeight="34.0" prefWidth="150.0" style="-fx-background-color: #4cc9eb; -fx-background-radius: 10px;" text="登录" textFill="WHITE">
+      <TextField fx:id="name" focusTraversable="false" layoutX="321.0" layoutY="239.0" prefHeight="73.0" prefWidth="497.0" promptText="账号" style="-fx-background-radius: 15px; -fx-background-color: rgba(209,225,152,1);">
          <font>
-            <Font size="16.0" />
+            <Font size="34.0" />
+         </font></TextField>
+      <TextField fx:id="pwd" focusTraversable="false" layoutX="321.0" layoutY="353.0" prefHeight="73.0" prefWidth="497.0" promptText="密码" style="-fx-background-radius: 15px; -fx-background-color: rgba(209,225,152,1);">
+         <font>
+            <Font size="34.0" />
+         </font></TextField>
+      <Button fx:id="login_btn" layoutX="484.0" layoutY="440.0" mnemonicParsing="false" onAction="#login" prefHeight="34.0" prefWidth="150.0" style="-fx-background-color: #4cc9eb; -fx-background-radius: 30px;" text="登录" textFill="WHITE">
+         <font>
+            <Font size="33.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Label fx:id="tip_register1" layoutX="254.0" layoutY="304.0" text="还没有账号，去">
+      <Label fx:id="tip_register1" layoutX="227.0" layoutY="505.0" text="还没有账号，去">
          <font>
             <Font size="11.0" />
          </font>
       </Label>
-      <Label fx:id="tip_register2" layoutX="331.0" layoutY="304.0" onMouseClicked="#register" text="注册" textFill="#0094ff">
+      <Label fx:id="tip_register2" layoutX="310.0" layoutY="528.0" onMouseClicked="#register" text="注册" textFill="#0094ff">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

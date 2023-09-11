@@ -10,4 +10,5 @@ open module LibraryManageSystem {
     requires org.bytedeco.javacv;
     requires javafx.swing;
     requires webcam.capture;
+    requires java.naming;
 }

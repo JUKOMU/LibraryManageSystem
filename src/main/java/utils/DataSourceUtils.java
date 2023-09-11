@@ -1,6 +1,7 @@
 package utils;
 
 import com.alibaba.druid.pool.DruidDataSourceFactory;
+import javax.naming.spi.ObjectFactory;
 
 import javax.sql.DataSource;
 import java.io.InputStream;
@@ -31,7 +32,7 @@ public class DataSourceUtils {
             p.load(is);
             System.out.println("p:"+p);
             //得到数据源
-            dataSource = DruidDataSourceFactory.createDataSource(p);
+            dataSource = com.alibaba.druid.pool.DruidDataSourceFactory.createDataSource(p);
             System.out.println("dataSource:"+dataSource);
         }catch (Exception e) {
             e.printStackTrace();

@@ -35,37 +35,37 @@ public class ButtonBarController {
 
     @FXML
     void onBookSearch(ActionEvent event) {
-        book_search.setStyle("-fx-background-color:#ffa500;-fx-background-radius:30px");
-        borrow_renewal.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:30px");
-        return_book.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:30px");
-        my_space.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:30px");
+        book_search.setStyle("-fx-background-color:#ffa500;-fx-background-radius:50px");
+        borrow_renewal.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:50px");
+        return_book.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:50px");
+        my_space.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:50px");
 
     }
 
     @FXML
     void onBorrowRenewal(ActionEvent event) {
-        book_search.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:30px");
-        borrow_renewal.setStyle("-fx-background-color:#ffa500;-fx-background-radius:30px;");
-        return_book.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:30px");
-        my_space.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:30px");
+        book_search.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:50px");
+        borrow_renewal.setStyle("-fx-background-color:#ffa500;-fx-background-radius:50px;");
+        return_book.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:50px");
+        my_space.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:50px");
 
     }
 
     @FXML
     void onReturnBook(ActionEvent event) {
-        book_search.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:30px");
-        borrow_renewal.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:30px");
-        return_book.setStyle("-fx-background-color:#ffa500;-fx-background-radius:30px;");
-        my_space.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:30px");
+        book_search.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:50px");
+        borrow_renewal.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:50px");
+        return_book.setStyle("-fx-background-color:#ffa500;-fx-background-radius:50px;");
+        my_space.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:50px");
 
     }
 
     @FXML
     void onMySpace(ActionEvent event) {
-        book_search.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:30px");
-        borrow_renewal.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:30px");
-        return_book.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:30px");
-        my_space.setStyle("-fx-background-color:#ffa500;-fx-background-radius:30px;");
+        book_search.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:50px");
+        borrow_renewal.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:50px");
+        return_book.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:50px");
+        my_space.setStyle("-fx-background-color:#ffa500;-fx-background-radius:50px;");
 
     }
 

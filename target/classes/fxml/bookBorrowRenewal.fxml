@@ -11,7 +11,7 @@
 
 <!-- 借阅和续借窗口 -->
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="333.0" prefWidth="625.0" style="-fx-background-color: #fef5e5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BookBorrowRenewalController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="333.0" prefWidth="625.0" style="-fx-background-color: #fef5e5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BookBorrowRenewalController">
    <children>
       <VBox layoutX="467.0" prefHeight="333.0" prefWidth="158.0" spacing="10.0">
          <children>
