@@ -126,16 +126,16 @@ public class BookDisplayController {
     private VBox vbox7;
 
     @FXML
-    private VBox[] vbox = new VBox[8];
+    private final VBox[] vbox = new VBox[8];
 
     @FXML
-    private ImageView[] grid_book_view = new ImageView[8];
+    private final ImageView[] grid_book_view = new ImageView[8];
 
     @FXML
-    private Label[] book_name = new Label[8];
+    private final Label[] book_name = new Label[8];
 
     @FXML
-    private Label[] book_surplus = new Label[8];
+    private final Label[] book_surplus = new Label[8];
 
     @FXML
     void initialize() {

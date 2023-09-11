@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c57b09d-6e38-463c-bc29-f2c4aafdf56e" name="更改" comment="添加数据库相关的依赖">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="1c57b09d-6e38-463c-bc29-f2c4aafdf56e" name="更改" comment="添加书籍和用户的数据库方法">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/BookDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/impl/BookDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/impl/BookDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/impl/UserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/BookService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +60,7 @@
     "project.structure.last.edited": "全局库",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "vue.rearranger.settings.migration": "true"
   }
@@ -94,7 +89,7 @@
       <workItem from="1694354564434" duration="2000" />
       <workItem from="1694354610934" duration="718000" />
       <workItem from="1694355634883" duration="187000" />
-      <workItem from="1694396170787" duration="3018000" />
+      <workItem from="1694396170787" duration="4026000" />
     </task>
     <task id="LOCAL-00001" summary="upload">
       <option name="closed" value="true" />
@@ -168,7 +163,39 @@
       <option name="project" value="LOCAL" />
       <updated>1694397417249</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="定义了书的实体类">
+      <option name="closed" value="true" />
+      <created>1694399319119</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1694399319119</updated>
+    </task>
+    <task id="LOCAL-00011" summary="定义了用户的实体类">
+      <option name="closed" value="true" />
+      <created>1694399332073</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1694399332073</updated>
+    </task>
+    <task id="LOCAL-00012" summary="更新依赖">
+      <option name="closed" value="true" />
+      <created>1694399345008</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1694399345008</updated>
+    </task>
+    <task id="LOCAL-00013" summary="添加书籍和用户的数据库方法">
+      <option name="closed" value="true" />
+      <created>1694399935493</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1694399935493</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,6 +216,10 @@
     <MESSAGE value="upload" />
     <MESSAGE value="添加数据库相关的类和接口" />
     <MESSAGE value="添加数据库相关的依赖" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加数据库相关的依赖" />
+    <MESSAGE value="定义了书的实体类" />
+    <MESSAGE value="定义了用户的实体类" />
+    <MESSAGE value="更新依赖" />
+    <MESSAGE value="添加书籍和用户的数据库方法" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加书籍和用户的数据库方法" />
   </component>
 </project>

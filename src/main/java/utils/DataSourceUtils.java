@@ -96,7 +96,7 @@ public class DataSourceUtils {
             int columnCount = metaData.getColumnCount();
 
             //取出记录的次数
-            for(;rs.next();) {
+            while (rs.next()) {
                 //定义一个对象，用来装一条记录
                 //反射产生对象
                 T t = c.newInstance();
