@@ -9,7 +9,7 @@ import java.util.List;
 public class BookDaoImpl extends DataSourceUtils implements BookDao {
     @Override
     public List<Book> selectBookByName(String name) {
-        String sql = "SELECT * FROM books WHERE name = '" + name;
+        String sql = "SELECT * FROM books WHERE name like '%" + name + "%'";
         return executeQueryList(sql,Book.class);
     }
 

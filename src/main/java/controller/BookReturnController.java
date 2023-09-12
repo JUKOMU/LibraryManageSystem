@@ -178,7 +178,7 @@ public class BookReturnController {
                                                             book_author.setText(book2.getAuthor());
                                                             Image image3 = new Image("E:\\Java\\LibraryManageSystem\\src\\main\\resources\\img\\database_source\\" + book2.getId() + ".jpg");
                                                             book_view.setImage(image3);
-                                                        }
+                                                        }else {isRecognized = false;}
                                                     } catch (Exception e) {
                                                         e.printStackTrace();
                                                     }

@@ -140,6 +140,18 @@ public class BookDisplayController {
     @FXML
     private final Label[] book_name = new Label[8];
 
+    public ImageView[] getGrid_book_view() {
+        return grid_book_view;
+    }
+
+    public Label[] getBook_name() {
+        return book_name;
+    }
+
+    public Label[] getBook_surplus() {
+        return book_surplus;
+    }
+
     @FXML
     private final Label[] book_surplus = new Label[8];
 
@@ -217,6 +229,10 @@ public class BookDisplayController {
         book_surplus[6] = book_surplus7;
         book_surplus[7] = book_surplus8;
 
+        ControllerManager.controllers.put("bookDisplayController",this );
+    }
+
+    public void showAllBooks() {
         BookService bookService = new BookServiceImpl();
 
         Result result = bookService.findAllBook();
@@ -227,8 +243,5 @@ public class BookDisplayController {
             book_surplus[i].setText("馆藏剩余：" + books.get(i).getAvailable_copies() + "/" + books.get(i).getTotal_library_copies());
             grid_book_view[i].setImage(new Image("E:\\Java\\LibraryManageSystem\\src\\main\\resources\\img\\database_source\\" + books.get(i).getId() + ".jpg"));
         }
-
-
-        ControllerManager.controllers.put("bookDisplayController",this );
     }
 }
