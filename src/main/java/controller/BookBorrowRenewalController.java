@@ -60,6 +60,8 @@ public class BookBorrowRenewalController {
     private ImageView camera;
     @FXML
     private ImageView camera2;
+    @FXML
+    private Label success;
     private FrameGrabber grabber;
     private Java2DFrameConverter converter;
     private boolean capturing = true;
@@ -243,6 +245,7 @@ public class BookBorrowRenewalController {
                                                             book_author.setText(book2.getAuthor());
                                                             Image image3 = new Image("E:\\Java\\LibraryManageSystem\\src\\main\\resources\\img\\database_source\\" + book2.getId() + ".jpg");
                                                             book_view.setImage(image3);
+                                                            success.setText("借书成功");
                                                         }else {isRecognized = false;}
                                                     } catch (Exception e) {
                                                         e.printStackTrace();

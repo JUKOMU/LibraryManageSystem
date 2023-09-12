@@ -49,6 +49,8 @@ public class BookReturnController {
     private Label book_name;
     @FXML
     private Label tip_return;
+    @FXML
+    private Label success;
     private FrameGrabber grabber;
     private Java2DFrameConverter converter;
     private boolean capturing = false;
@@ -178,6 +180,7 @@ public class BookReturnController {
                                                             book_author.setText(book2.getAuthor());
                                                             Image image3 = new Image("E:\\Java\\LibraryManageSystem\\src\\main\\resources\\img\\database_source\\" + book2.getId() + ".jpg");
                                                             book_view.setImage(image3);
+                                                            success.setText("还书成功");
                                                         }else {isRecognized = false;}
                                                     } catch (Exception e) {
                                                         e.printStackTrace();
