@@ -129,7 +129,7 @@ public class WebcamViewerExample extends JFrame implements Runnable, WebcamListe
 
     @Override
     public void uncaughtException(Thread t, Throwable e) {
-        System.err.println(String.format("Exception in thread %s", t.getName()));
+        System.err.printf("Exception in thread %s%n", t.getName());
         e.printStackTrace();
     }
 

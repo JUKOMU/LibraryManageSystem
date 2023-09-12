@@ -6,5 +6,5 @@ import utils.Result;
 import javax.security.auth.login.LoginException;
 
 public interface UserService {
-    public Result login(User user) throws LoginException;
+    Result login(User user) throws LoginException;
 }

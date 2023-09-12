@@ -10,21 +10,34 @@ import javax.imageio.ImageIO;
  * 书籍实体类
  */
 public class Book {
+    private Integer id;
     private String name;
     private String author;
-    private Image coverImage;
+    private String barcode;
+    private Image cover_image;
     // 总馆藏
-    private Integer totalLibraryCopies;
+    private Integer total_library_copies;
     // 馆藏剩余
-    private Integer availableCopies;
+    private Integer available_copies;
     public Book() {
     }
-    public Book(String name, String author, Image coverImage, Integer totalLibraryCopies, Integer availableCopies) {
+
+    public Book(Integer id, String name, String author, String barcode, Image cover_image, Integer total_library_copies, Integer available_copies) {
+        this.id = id;
         this.name = name;
         this.author = author;
-        this.coverImage = coverImage;
-        this.totalLibraryCopies = totalLibraryCopies;
-        this.availableCopies = availableCopies;
+        this.barcode = barcode;
+        this.cover_image = cover_image;
+        this.total_library_copies = total_library_copies;
+        this.available_copies = available_copies;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -43,37 +56,35 @@ public class Book {
         this.author = author;
     }
 
-    public Image getCoverImage() {
-        return coverImage;
+    public String getBarcode() {
+        return barcode;
     }
 
-    public void setCoverImage(Image coverImage) {
-        this.coverImage = coverImage;
-    }
-    public Integer getTotalLibraryCopies() {
-        return totalLibraryCopies;
+    public void setBarcode(String barcode) {
+        this.barcode = barcode;
     }
 
-    public void setTotalLibraryCopies(Integer totalLibraryCopies) {
-        this.totalLibraryCopies = totalLibraryCopies;
+    public Image getCover_image() {
+        return cover_image;
     }
 
-    public Integer getAvailableCopies() {
-        return availableCopies;
+    public void setCover_image(Image cover_image) {
+        this.cover_image = cover_image;
     }
 
-    public void setAvailableCopies(Integer availableCopies) {
-        this.availableCopies = availableCopies;
+    public Integer getTotal_library_copies() {
+        return total_library_copies;
     }
 
-    @Override
-    public String toString() {
-        return "Book{" +
-                "name='" + name + '\'' +
-                ", author='" + author + '\'' +
-                ", coverImage=" + coverImage +
-                ", totalLibraryCopies=" + totalLibraryCopies +
-                ", availableCopies=" + availableCopies +
-                '}';
+    public void setTotal_library_copies(Integer total_library_copies) {
+        this.total_library_copies = total_library_copies;
+    }
+
+    public Integer getAvailable_copies() {
+        return available_copies;
+    }
+
+    public void setAvailable_copies(Integer available_copies) {
+        this.available_copies = available_copies;
     }
 }

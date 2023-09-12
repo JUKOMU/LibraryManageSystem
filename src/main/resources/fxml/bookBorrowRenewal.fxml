@@ -35,6 +35,7 @@
             <Font size="27.0" />
          </font>
       </Label>
-      <ImageView fx:id="camera" fitHeight="461.0" fitWidth="611.0" layoutX="102.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="camera" fitHeight="480.0" fitWidth="640.0" layoutX="103.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="camera2" fitHeight="480.0" fitWidth="640.0" layoutX="103.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </Pane>

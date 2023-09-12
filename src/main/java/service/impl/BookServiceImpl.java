@@ -9,7 +9,7 @@ import utils.Result;
 import java.util.List;
 
 public class BookServiceImpl implements BookService {
-    private BookDao bookDao=new BookDaoImpl();
+    private final BookDao bookDao=new BookDaoImpl();
 
     @Override
     public Result findBookByAuthor(String author) {

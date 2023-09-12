@@ -15,29 +15,23 @@ public class User {
     private int current_borrowed_books;   // 正在借阅的书籍数量
     public User() {
     }
-    public User(String username, String password, String userFaceImage, int userRole, int borrowedCount, int currentBorrowedBooks) {
-        this.user_name = username;
+
+    public User(int id, String user_name, String password, String user_face_image, int user_role, int borrowed_count, int current_borrowed_books) {
+        this.id = id;
+        this.user_name = user_name;
         this.password = password;
-        this.user_face_image = userFaceImage;
-        this.user_role = userRole;
-        this.borrowed_count = borrowedCount;
-        this.current_borrowed_books = currentBorrowedBooks;
-    }
-
-    public int getBorrowed_count() {
-        return borrowed_count;
-    }
-
-    public void setBorrowed_count(int borrowed_count) {
+        this.user_face_image = user_face_image;
+        this.user_role = user_role;
         this.borrowed_count = borrowed_count;
-    }
-
-    public int getCurrent_borrowed_books() {
-        return current_borrowed_books;
-    }
-
-    public void setCurrent_borrowed_books(int current_borrowed_books) {
         this.current_borrowed_books = current_borrowed_books;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getUser_name() {
@@ -56,12 +50,12 @@ public class User {
         this.password = password;
     }
 
-    public String getUserFaceImage() {
+    public String getUser_face_image() {
         return user_face_image;
     }
 
-    public void setUserFaceImage(String userFaceImage) {
-        this.user_face_image = userFaceImage;
+    public void setUser_face_image(String user_face_image) {
+        this.user_face_image = user_face_image;
     }
 
     public int getUser_role() {
@@ -72,15 +66,19 @@ public class User {
         this.user_role = user_role;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "username='" + user_name + '\'' +
-                ", password='" + password + '\'' +
-                ", userFaceImage=" + user_face_image +
-                ", userRole=" + user_role +
-                ", borrowedCount=" + borrowed_count +
-                ", currentBorrowedBooks=" + current_borrowed_books +
-                '}';
+    public int getBorrowed_count() {
+        return borrowed_count;
+    }
+
+    public void setBorrowed_count(int borrowed_count) {
+        this.borrowed_count = borrowed_count;
+    }
+
+    public int getCurrent_borrowed_books() {
+        return current_borrowed_books;
+    }
+
+    public void setCurrent_borrowed_books(int current_borrowed_books) {
+        this.current_borrowed_books = current_borrowed_books;
     }
 }

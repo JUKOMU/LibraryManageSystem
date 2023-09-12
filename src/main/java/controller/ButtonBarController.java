@@ -27,7 +27,7 @@ public class ButtonBarController {
 
     @FXML
     private Button borrow_renewal;
-    private boolean[] isON = {false, false, false, false};
+    private final boolean[] isON = {false, false, false, false};
 
     @FXML
     private Button my_space;
@@ -71,8 +71,8 @@ public class ButtonBarController {
             }
             isON[1] = true;
 
-            BookReturnController bookReturnController = (BookReturnController) ControllerManager.controllers.get("bookReturnController");
-            bookReturnController.setCapturing(false);
+            //BookReturnController bookReturnController = (BookReturnController) ControllerManager.controllers.get("bookReturnController");
+            //bookReturnController.setCapturing(false);
 
             book_search.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:50px");
             borrow_renewal.setStyle("-fx-background-color:#ffa500;-fx-background-radius:50px;");
@@ -97,8 +97,8 @@ public class ButtonBarController {
             }
             isON[2] = true;
 
-            BookBorrowRenewalController bookBorrowRenewalController = (BookBorrowRenewalController) ControllerManager.controllers.get("bookBorrowRenewalController");
-            bookBorrowRenewalController.setCapturing(false);
+            //BookBorrowRenewalController bookBorrowRenewalController = (BookBorrowRenewalController) ControllerManager.controllers.get("bookBorrowRenewalController");
+            //bookBorrowRenewalController.setCapturing(false);
 
             book_search.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:50px");
             borrow_renewal.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:50px");

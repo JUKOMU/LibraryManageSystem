@@ -8,7 +8,7 @@ import utils.Result;
 
 public class UserServiceImpl implements UserService {
     //定义dao对象，调用dao中查询方法
-    private UserDao userDao=new UserDaoImpl();
+    private final UserDao userDao=new UserDaoImpl();
     @Override
     public Result login(User user) {
         User user1=userDao.selectUserByUsernameAndPassword(user.getUser_name(),user.getPassword());

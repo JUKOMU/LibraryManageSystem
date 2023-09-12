@@ -41,11 +41,11 @@ public class BarCode {
             e.printStackTrace();
         }
     }
-    private static void readCode(File file) {
+    public static String readCode(File file) {
         try {
             BufferedImage image = ImageIO.read(file);
             if(image == null) {
-                return;
+                return null;
             }
             LuminanceSource source = new BufferedImageLuminanceSource(image);
             BinaryBitmap bitmap = new BinaryBitmap(new HybridBinarizer(source));
@@ -56,9 +56,11 @@ public class BarCode {
 
             Result result = new MultiFormatReader().decode(bitmap,hints);
             System.out.println("条形码内容:"+result.getText());
+            return result.getText();
         }catch (Exception e) {
             e.printStackTrace();
         }
+        return null;
     }
     public static void main(String[] args) {
         //generateCode(new File("1dcode.png"), "123456789041", 500, 250);
