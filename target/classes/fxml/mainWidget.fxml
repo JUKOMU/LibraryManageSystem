@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -15,12 +16,16 @@
             <HBox prefHeight="761.0" prefWidth="1500.0">
                <children>
                   <fx:include source="buttonBar.fxml" />
-                  <HBox fx:id="main_hbox" prefHeight="727.0" prefWidth="1238.0">
+                  <HBox fx:id="main_hbox" alignment="CENTER" prefHeight="727.0" prefWidth="1238.0">
                      <padding>
                         <Insets bottom="20.0" left="40.0" right="20.0" top="40.0" />
                      </padding>
                      <children>
-
+                        <Label prefHeight="157.0" prefWidth="700.0" text="欢迎使用护肝小组的图书管理系统">
+                           <font>
+                              <Font size="43.0" />
+                           </font>
+                        </Label>
                      </children>
                   </HBox>
                </children></HBox>
