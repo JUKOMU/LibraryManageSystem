@@ -8,25 +8,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c57b09d-6e38-463c-bc29-f2c4aafdf56e" name="更改" comment="upload">
-      <change afterPath="$PROJECT_DIR$/1dcode.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/1dcode.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/MySpaceController2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/database_source/新建 文本文档.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/camera/CameraCaptureApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/camera/CameraCaptureApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/camera/WebcamViewerExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/camera/WebcamViewerExample.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/BookBorrowRenewalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/BookBorrowRenewalController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ButtonBarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ButtonBarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/BookDisplayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/BookDisplayController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/BookReturnController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/BookReturnController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/MySpaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/MySpaceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/BookDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/impl/BookDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/impl/BookDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/BookService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/BookServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/zxing/BarCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zxing/BarCode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/bookBorrowRenewal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/bookBorrowRenewal.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/camera/CameraCaptureApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/camera/CameraCaptureApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/bookReturn.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/bookReturn.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/mySpace.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/mySpace.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/img/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/img/1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/img/output.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/img/output.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/camera/WebcamViewerExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/camera/WebcamViewerExample.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controller/BookBorrowRenewalController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/BookBorrowRenewalController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/BookReturn.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/BookReturnController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/BookReturnController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controller/ButtonBarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/ButtonBarController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/MySpaceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/MySpaceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/BookDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/BookDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/impl/BookDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/impl/BookDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/domain/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fxml/bookBorrowRenewal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/bookBorrowRenewal.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/bookReturn.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/bookReturn.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/mySpace.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/mySpace.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/img/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/img/1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/img/output.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/img/output.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/BookService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/impl/BookServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/impl/BookServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/zxing/BarCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/zxing/BarCode.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +54,8 @@
         <option value="package-info" />
         <option value="module-info" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -81,7 +96,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "E:/Java/LibraryManageSystem/src/main/java",
+    "last_opened_file_path": "E:/Java/LibraryManageSystem/src/main/resources/img",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -101,8 +116,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Java\LibraryManageSystem\src\main\java" />
       <recent name="E:\Java\LibraryManageSystem\src\main\resources\img" />
+      <recent name="E:\Java\LibraryManageSystem\src\main\java" />
       <recent name="E:\Java\LibraryManageSystem\src\main\resources\fxml" />
       <recent name="E:\Java\LibraryManageSystem\src\main\resources" />
       <recent name="E:\Java\LibraryManageSystem\src\main\java\utils" />
@@ -157,7 +172,7 @@
       <workItem from="1694444993515" duration="1455000" />
       <workItem from="1694446637261" duration="230000" />
       <workItem from="1694476215015" duration="112000" />
-      <workItem from="1694476360907" duration="9356000" />
+      <workItem from="1694476360907" duration="15549000" />
     </task>
     <task id="LOCAL-00001" summary="upload">
       <option name="closed" value="true" />
@@ -399,7 +414,23 @@
       <option name="project" value="LOCAL" />
       <updated>1694438080553</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="upload">
+      <option name="closed" value="true" />
+      <created>1694486017536</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1694486017536</updated>
+    </task>
+    <task id="LOCAL-00032" summary="upload">
+      <option name="closed" value="true" />
+      <created>1694486056238</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1694486056238</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -430,6 +461,16 @@
     <MESSAGE value="摄像头部分" />
     <MESSAGE value="upload" />
     <option name="LAST_COMMIT_MESSAGE" value="upload" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalStateException" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

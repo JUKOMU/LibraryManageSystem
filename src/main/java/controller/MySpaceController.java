@@ -72,6 +72,8 @@ public class MySpaceController {
             //判断结果对象中的状态码
             if(result.getCode()==200) {
                 //正确
+                User user2 = (User) result.getData();
+
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/mySpace.fxml"));
                 Node node = loader.load();
 
@@ -79,6 +81,8 @@ public class MySpaceController {
                 HBox mainHbox = mainController.getMain_hbox();
                 mainHbox.getChildren().clear();
                 mainHbox.getChildren().addAll(node);
+                MySpaceController2 mySpaceController2 = (MySpaceController2) ControllerManager.controllers.get("mySpaceController2");
+                mySpaceController2.showUser(user2);
             } else {
                 throw new Exception();
             }

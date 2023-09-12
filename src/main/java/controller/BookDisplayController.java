@@ -1,19 +1,25 @@
 package controller;
 
 import java.net.URL;
+import java.util.List;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
+import domain.Book;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
+import service.BookService;
+import service.impl.BookServiceImpl;
+import utils.Result;
 
 public class BookDisplayController {
 
@@ -210,6 +216,17 @@ public class BookDisplayController {
         book_surplus[5] = book_surplus6;
         book_surplus[6] = book_surplus7;
         book_surplus[7] = book_surplus8;
+
+        BookService bookService = new BookServiceImpl();
+
+        Result result = bookService.findAllBook();
+
+        List<Book> books = (List<Book>) result.getData();
+        for (int i = 0; i < 8; i++) {
+            book_name[i].setText(books.get(i).getName());
+            book_surplus[i].setText("馆藏剩余：" + books.get(i).getAvailable_copies() + "/" + books.get(i).getTotal_library_copies());
+            grid_book_view[i].setImage(new Image("E:\\Java\\LibraryManageSystem\\src\\main\\resources\\img\\database_source\\" + books.get(i).getId() + ".jpg"));
+        }
 
 
         ControllerManager.controllers.put("bookDisplayController",this );

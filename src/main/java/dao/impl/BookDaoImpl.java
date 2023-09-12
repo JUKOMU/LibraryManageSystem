@@ -27,7 +27,14 @@ public class BookDaoImpl extends DataSourceUtils implements BookDao {
 
     @Override
     public List<Book> selectAllBook() {
-        return null;
+        String sql = "SELECT * FROM books";
+        return executeQueryList(sql,Book.class);
+    }
+
+    @Override
+    public Book selectBookByBarCode(String barCode) {
+        String sql = "SELECT * FROM books WHERE barCode = '" + barCode + "'";
+        return executeQueryOne(sql,Book.class);
     }
 
 }

@@ -3,16 +3,26 @@ package controller;
 import com.google.zxing.*;
 import com.google.zxing.client.j2se.BufferedImageLuminanceSource;
 import com.google.zxing.common.HybridBinarizer;
+import domain.Book;
+import domain.User;
 import javafx.application.Platform;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
 import org.bytedeco.javacv.Frame;
 import org.bytedeco.javacv.FrameGrabber;
 import org.bytedeco.javacv.Java2DFrameConverter;
 import org.bytedeco.javacv.OpenCVFrameGrabber;
+import service.BookService;
+import service.UserService;
+import service.impl.BookServiceImpl;
+import service.impl.UserServiceImpl;
+import utils.Result;
 import zxing.BarCode;
 
 import javax.imageio.ImageIO;
@@ -130,23 +140,23 @@ public class BookBorrowRenewalController {
 
             capturing = true;
 
-            Thread captureThread = new Thread(() -> {
-                try {
-                    while (capturing) {
-                        Frame frame = grabber.grab();
-                        if (frame != null) {
-                            BufferedImage bufferedImage = converter.convert(frame);
-                            Image image = SwingFXUtils.toFXImage(bufferedImage, null);
-                            Platform.runLater(() -> camera.setImage(image));
-                            // 创建两个Date对象
-                            Date date2 = new Date(); // 当前时间
-                            // 计算两个时间的间隔（毫秒）
-                            long milliseconds = date2.getTime() - currentTime.getTime();
-                            // 将毫秒转换为秒
-                            long seconds = milliseconds / 1000;
-                            if (seconds > 3) {
-                                Thread thread = new Thread(() -> {
-                                    if (!isRecognized) {
+            Platform.runLater(() -> {
+                Thread captureThread = new Thread(() -> {
+                    try {
+                        while (capturing) {
+                            Frame frame = grabber.grab();
+                            if (frame != null) {
+                                BufferedImage bufferedImage = converter.convert(frame);
+                                Image image = SwingFXUtils.toFXImage(bufferedImage, null);
+                                Platform.runLater(() -> camera.setImage(image));
+                                // 创建两个Date对象
+                                Date date2 = new Date(); // 当前时间
+                                // 计算两个时间的间隔（毫秒）
+                                long milliseconds = date2.getTime() - currentTime.getTime();
+                                // 将毫秒转换为秒
+                                long seconds = milliseconds / 1000;
+                                if (seconds > 1) {
+                                    Platform.runLater(() -> {
                                         try {
                                             doExecuteFrame(grabber.grab(), "src/main/resources/img/1.jpg");
                                             try {
@@ -192,7 +202,7 @@ public class BookBorrowRenewalController {
                                                 Graphics2D g2d = image2.createGraphics();
 
                                                 // 设置线条颜色和宽度
-                                                g2d.setColor(Color.RED);
+                                                g2d.setColor(Color.GREEN);
                                                 g2d.setStroke(new BasicStroke(2)); // 设置线条宽度
 
                                                 // 绘制线条（示例：从点(50, 50)到点(200, 200)）
@@ -216,8 +226,27 @@ public class BookBorrowRenewalController {
                                                 camera2.setImage(img);
 
                                                 String code = BarCode.readCode(new File("E:\\Java\\LibraryManageSystem\\src\\main\\resources\\img\\1.jpg"));
-                                                if (code != null) {
+                                                if (code != null && !isRecognized) {
                                                     isRecognized = true;
+                                                    BookService bookService = new BookServiceImpl();
+
+                                                    Book book = new Book();
+                                                    book.setBarcode(code);
+                                                    try {
+                                                        Result result = bookService.findBookByBarCode(book);
+                                                        if (result.getCode() == 200) {
+                                                            System.out.println("ok");
+                                                            //正确
+
+                                                            Book book2 = (Book) result.getData();
+                                                            book_name.setText(book2.getName());
+                                                            book_author.setText(book2.getAuthor());
+                                                            Image image3 = new Image("E:\\Java\\LibraryManageSystem\\src\\main\\resources\\img\\database_source\\" + book2.getId() + ".jpg");
+                                                            book_view.setImage(image3);
+                                                        }
+                                                    } catch (Exception e) {
+                                                        e.printStackTrace();
+                                                    }
                                                 }
                                             } catch (Exception e) {
                                                 e.printStackTrace();
@@ -225,20 +254,20 @@ public class BookBorrowRenewalController {
                                         } catch (IOException e) {
                                             e.printStackTrace();
                                         }
-                                    }
-                                });
-                                thread.start();
-                                currentTime = new Date();
+                                    });
+                                    currentTime = new Date();
+                                }
                             }
                         }
+                    }catch (Exception e) {
+                        e.printStackTrace();
                     }
-                }catch (Exception e) {
-                    e.printStackTrace();
-                }
-            });
-            captureThread.setDaemon(true);
-            currentTime = new Date();
-            captureThread.start();
+                });
+                captureThread.setDaemon(true);
+                currentTime = new Date();
+                captureThread.start();
+                    });
+
         }catch (Exception e) {
             e.printStackTrace();
         }

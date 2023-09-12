@@ -24,4 +24,6 @@ public interface BookDao {
     List<Book> selectBookByNameByAuthor(String name,String author);
 
     List<Book> selectAllBook();
+
+    Book selectBookByBarCode(String barCode);
 }

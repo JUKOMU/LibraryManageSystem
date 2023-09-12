@@ -15,15 +15,27 @@
    <children>
       <VBox layoutX="919.0" layoutY="8.0" prefHeight="615.0" prefWidth="253.0" spacing="10.0">
          <children>
-            <ImageView fx:id="book_view" fitHeight="178.0" fitWidth="193.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="book_view" fitHeight="200.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true">
                <VBox.margin>
-                  <Insets bottom="10.0" left="30.0" right="10.0" top="10.0" />
+                  <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
                </VBox.margin>
             </ImageView>
-            <Label text="书名：" />
-            <Label fx:id="book_name" />
-            <Label text="作者：" />
-            <Label fx:id="book_author" />
+            <Label text="书名：">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+            <Label fx:id="book_name">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+            <Label text="作者：">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+            <Label fx:id="book_author">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
          </children>
          <padding>
             <Insets top="20.0" />

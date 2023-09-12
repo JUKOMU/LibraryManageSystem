@@ -3,13 +3,14 @@ package service.impl;
 import dao.BookDao;
 import dao.impl.BookDaoImpl;
 import domain.Book;
+import domain.User;
 import service.BookService;
 import utils.Result;
 
 import java.util.List;
 
 public class BookServiceImpl implements BookService {
-    private final BookDao bookDao=new BookDaoImpl();
+    private final BookDao bookDao = new BookDaoImpl();
 
     @Override
     public Result findBookByAuthor(String author) {
@@ -49,6 +50,23 @@ public class BookServiceImpl implements BookService {
             result.setData(books);
         }else {
             result.setCode(-1);  //-1 是一个状态码
+        }
+        return result;
+    }
+
+    @Override
+    public Result findBookByBarCode(Book book) {
+        Book book1=bookDao.selectBookByBarCode(book.getBarcode());
+        System.out.println(book.getBarcode());
+        //产生result对象
+        Result result=new Result();
+        //判断一下user1 是否为空
+        if(book1!=null) {
+            //保存数据到result
+            result.setData(book1);
+            //返回
+        }else {
+            result.setCode(-1);
         }
         return result;
     }
