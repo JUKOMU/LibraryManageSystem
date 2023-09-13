@@ -115,10 +115,12 @@ public class BookBorrowRenewalController {
         assert tip != null : "fx:id=\"tip\" was not injected: check your FXML file 'bookBorrowRenewal.fxml'.";
         assert book_name != null : "fx:id=\"book_name\" was not injected: check your FXML file 'bookBorrowRenewal.fxml'.";
         assert camera != null : "fx:id=\"camera\" was not injected: check your FXML file 'bookBorrowRenewal.fxml'.";
+        run();
+        ControllerManager.controllers.put("bookBorrowRenewalController", this);
+    }
 
-
+    private void run(){
         try {
-
             grabber = new OpenCVFrameGrabber(0); // 0 表示默认摄像头
             grabber.start();
 
@@ -165,7 +167,7 @@ public class BookBorrowRenewalController {
                                 barCodeThread.start();
                             } else if (isRecognizedBook && !isRecognizedFace) {
                                 faceThread.start();
-                            } else if (isRecognizedBook && isRecognizedFace) {
+                            } else if (isRecognizedBook) {
                                 showFacePos();
                             }
                             currentTime  = new Date();
@@ -182,7 +184,6 @@ public class BookBorrowRenewalController {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        ControllerManager.controllers.put("bookBorrowRenewalController", this);
     }
 
     private void showFacePos() {
@@ -193,6 +194,7 @@ public class BookBorrowRenewalController {
             facePos = FaceUtil.faceDetect(imageBase64);
             drawFacePos();
         } catch (IOException e) {
+            run();
             throw new RuntimeException(e);
         }
     }
