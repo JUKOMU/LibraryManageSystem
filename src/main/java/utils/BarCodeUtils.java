@@ -37,9 +37,7 @@ public class BarCodeUtils {
                 }
             }
             System.out.println(num);
-            // 等待命令执行完成
-            process.waitFor();
-        } catch (InterruptedException | UnsupportedEncodingException e) {
+        } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         } catch (IOException e) {
             throw new RuntimeException(e);
