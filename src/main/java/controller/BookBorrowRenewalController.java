@@ -13,6 +13,8 @@ import org.bytedeco.javacv.Java2DFrameConverter;
 import org.bytedeco.javacv.OpenCVFrameGrabber;
 import service.BookService;
 import service.impl.BookServiceImpl;
+import utils.FaceUtil;
+import utils.ImageUtil;
 import utils.Result;
 import zxing.BarCode;
 
@@ -27,12 +29,13 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import static camera.CameraCaptureApp.doExecuteFrame;
-import static utils.BarCodeUtils.getBarCodePos;
+import static utils.BarCodeUtil.getBarCodePos;
 
 
 public class BookBorrowRenewalController {
 
-    private static int[][] num;
+    private static int[][] barcodePos;
+    private static double[][] facePos;
     public Date currentTime;
     @FXML
     private ResourceBundle resources;
@@ -56,7 +59,9 @@ public class BookBorrowRenewalController {
     private Java2DFrameConverter converter;
     private boolean capturing = true;
 
-    private boolean isRecognized = false;
+    private boolean isRecognizedBook = false;
+    private boolean isRecognizedFace = false;
+
 
     public static void main(String[] args) {
         try {
@@ -64,17 +69,6 @@ public class BookBorrowRenewalController {
             ProcessBuilder processBuilder = new ProcessBuilder("cmd.exe", "/c", "python E:\\Java\\LibraryManageSystem\\src\\main\\main.py 1.jpg"); // /c参数表示执行后关闭CMD窗口
             processBuilder.redirectErrorStream(true); // 将错误输出流与标准输出流合并
             Process process = processBuilder.start();
-
-            /*
-            // 获取命令输出结果
-            InputStream inputStream = process.getInputStream();
-            BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, "GBK")); // 设置编码为GBK
-            String line;
-            while ((line = reader.readLine()) != null) {
-                System.out.println(line);
-            }
-             */
-
 
             // 获取命令输出结果
             InputStream inputStream = process.getInputStream();
@@ -84,7 +78,7 @@ public class BookBorrowRenewalController {
             // 定义正则表达式来匹配坐标信息的行
             Pattern pattern = Pattern.compile("(\\d+) (\\d+)");
 
-            num = new int[4][2];
+            barcodePos = new int[4][2];
             int t = 0;
             while ((line = reader.readLine()) != null) {
                 // 使用正则表达式匹配坐标信息的行
@@ -93,8 +87,8 @@ public class BookBorrowRenewalController {
                     // 提取坐标信息
                     int x = Integer.parseInt(matcher.group(1));
                     int y = Integer.parseInt(matcher.group(2));
-                    num[t][0] = x;
-                    num[t][1] = y;
+                    barcodePos[t][0] = x;
+                    barcodePos[t][1] = y;
                     t = t + 1;
 
 
@@ -105,7 +99,7 @@ public class BookBorrowRenewalController {
                     System.out.println(line);
                 }
             }
-            System.out.println(num);
+            System.out.println(barcodePos);
 
             // 等待命令执行完成
             process.waitFor();
@@ -114,7 +108,7 @@ public class BookBorrowRenewalController {
         }
     }
 
-@FXML
+    @FXML
     void initialize() {
         assert book_view != null : "fx:id=\"book_view\" was not injected: check your FXML file 'bookBorrowRenewal.fxml'.";
         assert book_author != null : "fx:id=\"book_author\" was not injected: check your FXML file 'bookBorrowRenewal.fxml'.";
@@ -150,9 +144,24 @@ public class BookBorrowRenewalController {
                         long milliseconds = date2.getTime() - currentTime.getTime();
                         // 将毫秒转换为秒
                         long seconds = milliseconds / 1000;
-                        if (seconds > 1) {
-                            showBarCodePos();
-                            recognizeBarCode();
+
+                        Thread barCodeThread = new Thread(() -> {
+                                showBarCodePos();
+                                isRecognizedBook = recognizeBarCode();
+                            currentTime = new Date();
+                        });
+
+                        Thread faceThread = new Thread(() -> {
+                            showFacePos();
+                        });
+
+                        // 先检测条形码，再检测人脸
+                        if (seconds > 1 && !isRecognizedBook) {
+                            barCodeThread.start();
+
+                        } else if (seconds > 1.5 && !isRecognizedFace) {
+                            faceThread.start();
+                            //isRecognizedFace = recognizeFace();
                         }
                     }
                 }
@@ -163,27 +172,28 @@ public class BookBorrowRenewalController {
                 currentTime = new Date();
                 captureThread.start();
             });
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
-    ControllerManager.controllers.put("bookBorrowRenewalController",this);
+        ControllerManager.controllers.put("bookBorrowRenewalController", this);
     }
 
-    private void showBarCodePos(){
+    private void showFacePos() {
         try {
             doExecuteFrame(grabber.grab(), "src/main/resources/img/1.jpg");
-            num = getBarCodePos();
-            drawBarCode();
+            String imageName = "E:\\Java\\LibraryManageSystem\\src\\main\\resources\\img\\1.jpg";
+            String imageBase64 = ImageUtil.convertImageToBase64Str(imageName);
+            facePos = FaceUtil.faceDetect(imageBase64);
+            drawFacePos();
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
-        currentTime = new Date();
     }
 
-    private void drawBarCode() {
+    private void drawFacePos() {
         try {
             // 读取PNG图片
-            BufferedImage image2 = ImageIO.read(new File("E:\\Java\\LibraryManageSystem\\src\\main\\resources\\img\\barPos.png"));
+            BufferedImage image2 = ImageIO.read(new File("E:\\Java\\LibraryManageSystem\\src\\main\\resources\\img\\Pos.png"));
 
             // 创建Graphics2D对象以绘制在图像上
             Graphics2D g2d = image2.createGraphics();
@@ -193,39 +203,40 @@ public class BookBorrowRenewalController {
             g2d.setStroke(new BasicStroke(2)); // 设置线条宽度
 
             // 绘制线条
-            for (int i = 0; i < 4; i++) {
-                if (i < 3) {
-                    g2d.drawLine(num[i][0], num[i][1], num[i + 1][0], num[i + 1][1]);
-                } else {
-                    g2d.drawLine(num[i][0], num[i][1], num[0][0], num[0][1]);
+            if (facePos != null) {
+                for (int i = 0; i < 4; i++) {
+                    if (i < 3) {
+                        g2d.drawLine((int) facePos[i][0], (int) facePos[i][1], (int) facePos[i + 1][0], (int) facePos[i + 1][1]);
+                    } else {
+                        g2d.drawLine((int) facePos[i][0], (int) facePos[i][1], (int) facePos[0][0], (int) facePos[0][1]);
+                    }
                 }
+                // 释放Graphics2D对象
+                g2d.dispose();
+
+                // 保存修改后的图像
+                ImageIO.write(image2, "PNG", new File("E:\\Java\\LibraryManageSystem\\src\\main\\resources\\img\\output.png"));
+
+                System.out.println("线条已绘制到图像上并保存成功！");
+                Image img = new Image("E:\\Java\\LibraryManageSystem\\src\\main\\resources\\img\\output.png");
+                camera2.setImage(img);
             }
 
-            // 释放Graphics2D对象
-            g2d.dispose();
-
-            // 保存修改后的图像
-            ImageIO.write(image2, "PNG", new File("E:\\Java\\LibraryManageSystem\\src\\main\\resources\\img\\output.png"));
-
-            System.out.println("线条已绘制到图像上并保存成功！");
-            Image img = new Image("E:\\Java\\LibraryManageSystem\\src\\main\\resources\\img\\output.png");
-            camera2.setImage(img);
-        }catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    private boolean recognizeBarCode() {
+    private boolean recognizeFace() {
         String code = BarCode.readCode(new File("E:\\Java\\LibraryManageSystem\\src\\main\\resources\\img\\1.jpg"));
-        if (code != null && !isRecognized) {
-            isRecognized = true;
+        if (code != null && !isRecognizedBook) {
             BookService bookService = new BookServiceImpl();
 
             Book book = new Book();
             book.setBarcode(code);
             Result result = bookService.findBookByBarCode(book);
             if (result.getCode() == 200) {
-                System.out.println("ok");
+                //System.out.println("ok");
                 //正确
                 Book book2 = (Book) result.getData();
                 Image image3 = new Image("E:\\Java\\LibraryManageSystem\\src\\main\\resources\\img\\database_source\\" + book2.getId() + ".jpg");
@@ -238,7 +249,91 @@ public class BookBorrowRenewalController {
 
                 //success.setText("借书成功");
                 return true;
-            }else {isRecognized = false;}
+            }
+        }
+        return false;
+    }
+
+
+    /**
+     * 显示条形码检测框
+     */
+    private void showBarCodePos() {
+        try {
+            doExecuteFrame(grabber.grab(), "src/main/resources/img/1.jpg");
+            barcodePos = getBarCodePos();
+            drawBarCode();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 绘制条形码的检测框
+     */
+    private void drawBarCode() {
+        try {
+            // 读取PNG图片
+            BufferedImage image2 = ImageIO.read(new File("E:\\Java\\LibraryManageSystem\\src\\main\\resources\\img\\Pos.png"));
+
+            // 创建Graphics2D对象以绘制在图像上
+            Graphics2D g2d = image2.createGraphics();
+
+            // 设置线条颜色和宽度
+            g2d.setColor(Color.GREEN);
+            g2d.setStroke(new BasicStroke(2)); // 设置线条宽度
+
+            // 绘制线条
+            for (int i = 0; i < 4; i++) {
+                if (i < 3) {
+                    g2d.drawLine(barcodePos[i][0], barcodePos[i][1], barcodePos[i + 1][0], barcodePos[i + 1][1]);
+                } else {
+                    g2d.drawLine(barcodePos[i][0], barcodePos[i][1], barcodePos[0][0], barcodePos[0][1]);
+                }
+            }
+
+            // 释放Graphics2D对象
+            g2d.dispose();
+
+            // 保存修改后的图像
+            ImageIO.write(image2, "PNG", new File("E:\\Java\\LibraryManageSystem\\src\\main\\resources\\img\\output.png"));
+
+            System.out.println("线条已绘制到图像上并保存成功！");
+            Image img = new Image("E:\\Java\\LibraryManageSystem\\src\\main\\resources\\img\\output.png");
+            camera2.setImage(img);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 读取条形码，并在数据库查找，成功则显示书籍信息
+     *
+     * @return
+     */
+    private boolean recognizeBarCode() {
+        String code = BarCode.readCode(new File("E:\\Java\\LibraryManageSystem\\src\\main\\resources\\img\\1.jpg"));
+        if (code != null && !isRecognizedBook) {
+            BookService bookService = new BookServiceImpl();
+
+            Book book = new Book();
+            book.setBarcode(code);
+            Result result = bookService.findBookByBarCode(book);
+            if (result.getCode() == 200) {
+                //System.out.println("ok");
+                //正确
+                Book book2 = (Book) result.getData();
+                Image image3 = new Image("E:\\Java\\LibraryManageSystem\\src\\main\\resources\\img\\database_source\\" + book2.getId() + ".jpg");
+
+                Platform.runLater(() -> {
+                    book_name.setText(book2.getName());
+                    book_author.setText(book2.getAuthor());
+                    book_view.setImage(image3);
+                });
+
+                //success.setText("借书成功");
+                return true;
+            }
         }
         return false;
     }

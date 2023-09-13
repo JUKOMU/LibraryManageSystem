@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class BarCodeUtils {
+public class BarCodeUtil {
     public static int[][] getBarCodePos(){
         int[][] num = new int[4][2];
         try {

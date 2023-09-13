@@ -86,28 +86,6 @@ public class ButtonBarController {
             BookDisplayController bookDisplayController = (BookDisplayController) ControllerManager.controllers.get("bookDisplayController");
         }
     }
-    void onBookSearch() throws IOException {
-        if (!isON[0]) {
-            for (int i = 0; i < 4;i++) {
-                isON[i] = false;
-            }
-            isON[0] = true;
-            book_search.setStyle("-fx-background-color:#ffa500;-fx-background-radius:50px");
-            borrow_renewal.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:50px");
-            return_book.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:50px");
-            my_space.setStyle("-fx-background-color:#fdcd76;-fx-background-radius:50px");
-
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/bookDisplayBox.fxml"));
-            Node node = loader.load();
-
-            MainController mainController = (MainController) ControllerManager.controllers.get("mainController");
-            HBox mainHbox = mainController.getMain_hbox();
-            mainHbox.getChildren().clear();
-            mainHbox.getChildren().add(node);
-            BookDisplayController bookDisplayController = (BookDisplayController) ControllerManager.controllers.get("bookDisplayController");
-            bookDisplayController.showAllBooks();
-        }
-    }
 
     @FXML
     void onBorrowRenewal(ActionEvent event) throws IOException {

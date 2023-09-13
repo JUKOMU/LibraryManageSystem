@@ -2,11 +2,11 @@ package dao.impl;
 
 import dao.BookDao;
 import domain.Book;
-import utils.DataSourceUtils;
+import utils.DataSourceUtil;
 
 import java.util.List;
 
-public class BookDaoImpl extends DataSourceUtils implements BookDao {
+public class BookDaoImpl extends DataSourceUtil implements BookDao {
     @Override
     public List<Book> selectBookByName(String name) {
         String sql = "SELECT * FROM books WHERE name like '%" + name + "%'";

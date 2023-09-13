@@ -12,4 +12,6 @@ open module LibraryManageSystem {
     requires webcam.capture;
     requires java.naming;
     requires org.bytedeco.opencv;
+    requires okhttp3;
+    requires json;
 }

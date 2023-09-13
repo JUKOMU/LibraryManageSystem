@@ -1,8 +1,5 @@
 package utils;
 
-import com.alibaba.druid.pool.DruidDataSourceFactory;
-import javax.naming.spi.ObjectFactory;
-
 import javax.sql.DataSource;
 import java.io.InputStream;
 import java.lang.reflect.Field;
@@ -14,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-public class DataSourceUtils {
+public class DataSourceUtil {
 
     //定义一个数据源
     private static DataSource dataSource;
@@ -24,7 +21,7 @@ public class DataSourceUtils {
         try {
             //读取连接数据库的基本信息
             //定义输入流
-            InputStream is=DataSourceUtils.class.getClassLoader().getResourceAsStream("db.properties");
+            InputStream is= DataSourceUtil.class.getClassLoader().getResourceAsStream("db.properties");
             System.out.println(is);
             //定义属性对象
             Properties p=new Properties();
@@ -80,7 +77,7 @@ public class DataSourceUtils {
             }
 
             //获取conn连接
-            conn = DataSourceUtils.getConnection();
+            conn = DataSourceUtil.getConnection();
             //创建语句
             pstmt=conn.prepareStatement(sql);
             //给占位符赋值
@@ -175,7 +172,7 @@ public class DataSourceUtils {
                 return 0;
             }
             //获取连接
-            conn = DataSourceUtils.getConnection();
+            conn = DataSourceUtil.getConnection();
             //创建Statement对象
             st = conn.prepareStatement(sql);
             //给sql赋值参数
@@ -188,7 +185,7 @@ public class DataSourceUtils {
             throwables.printStackTrace();
         }finally {
             //释放资源
-            DataSourceUtils.close(conn,st,null);
+            DataSourceUtil.close(conn,st,null);
         }
         return i;
     }
@@ -197,7 +194,7 @@ public class DataSourceUtils {
         Connection connection = getConnection();
         System.out.println(connection);
 
-        DataSourceUtils ds=new DataSourceUtils();
+        DataSourceUtil ds=new DataSourceUtil();
         List<Stu> stuList=ds.executeQueryList("select * from stu", Stu.class);
         stuList.forEach(System.out::println);
     }*/

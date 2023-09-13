@@ -6,8 +6,6 @@ import java.io.*;
 import java.net.URL;
 import java.util.Date;
 import java.util.ResourceBundle;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import domain.Book;
 import javafx.application.Platform;
@@ -28,7 +26,7 @@ import zxing.BarCode;
 import javax.imageio.ImageIO;
 
 import static camera.CameraCaptureApp.doExecuteFrame;
-import static utils.BarCodeUtils.getBarCodePos;
+import static utils.BarCodeUtil.getBarCodePos;
 
 public class BookReturnController {
 
@@ -129,7 +127,7 @@ public class BookReturnController {
     private void drawBarCode() {
         try {
             // 读取PNG图片
-            BufferedImage image2 = ImageIO.read(new File("E:\\Java\\LibraryManageSystem\\src\\main\\resources\\img\\barPos.png"));
+            BufferedImage image2 = ImageIO.read(new File("E:\\Java\\LibraryManageSystem\\src\\main\\resources\\img\\Pos.png"));
 
             // 创建Graphics2D对象以绘制在图像上
             Graphics2D g2d = image2.createGraphics();
