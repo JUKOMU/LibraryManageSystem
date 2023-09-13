@@ -170,15 +170,13 @@ public class BookBorrowRenewalController {
     }
 
     private void showBarCodePos(){
-        Platform.runLater(() -> {
-            try {
-                doExecuteFrame(grabber.grab(), "src/main/resources/img/1.jpg");
-                num = getBarCodePos();
-                drawBarCode();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        });
+        try {
+            doExecuteFrame(grabber.grab(), "src/main/resources/img/1.jpg");
+            num = getBarCodePos();
+            drawBarCode();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         currentTime = new Date();
     }
 
@@ -230,10 +228,14 @@ public class BookBorrowRenewalController {
                 System.out.println("ok");
                 //正确
                 Book book2 = (Book) result.getData();
-                book_name.setText(book2.getName());
-                book_author.setText(book2.getAuthor());
                 Image image3 = new Image("E:\\Java\\LibraryManageSystem\\src\\main\\resources\\img\\database_source\\" + book2.getId() + ".jpg");
-                book_view.setImage(image3);
+
+                Platform.runLater(() -> {
+                    book_name.setText(book2.getName());
+                    book_author.setText(book2.getAuthor());
+                    book_view.setImage(image3);
+                });
+
                 //success.setText("借书成功");
                 return true;
             }else {isRecognized = false;}
