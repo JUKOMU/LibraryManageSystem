@@ -146,22 +146,29 @@ public class BookBorrowRenewalController {
                         long seconds = milliseconds / 1000;
 
                         Thread barCodeThread = new Thread(() -> {
-                                showBarCodePos();
-                                isRecognizedBook = recognizeBarCode();
-                            currentTime = new Date();
+                            showBarCodePos();
+                            isRecognizedBook = recognizeBarCode();
                         });
 
                         Thread faceThread = new Thread(() -> {
                             showFacePos();
+                            try {
+                                isRecognizedFace = recognizeFace();
+                            } catch (IOException e) {
+                                throw new RuntimeException(e);
+                            }
                         });
 
                         // 先检测条形码，再检测人脸
-                        if (seconds > 1 && !isRecognizedBook) {
-                            barCodeThread.start();
-
-                        } else if (seconds > 1.5 && !isRecognizedFace) {
-                            faceThread.start();
-                            //isRecognizedFace = recognizeFace();
+                        if (seconds > 1.2) {
+                            if (!isRecognizedBook && !isRecognizedFace) {
+                                barCodeThread.start();
+                            } else if (isRecognizedBook && !isRecognizedFace) {
+                                faceThread.start();
+                            } else if (isRecognizedBook && isRecognizedFace) {
+                                showFacePos();
+                            }
+                            currentTime  = new Date();
                         }
                     }
                 }
@@ -227,31 +234,10 @@ public class BookBorrowRenewalController {
         }
     }
 
-    private boolean recognizeFace() {
-        String code = BarCode.readCode(new File("E:\\Java\\LibraryManageSystem\\src\\main\\resources\\img\\1.jpg"));
-        if (code != null && !isRecognizedBook) {
-            BookService bookService = new BookServiceImpl();
-
-            Book book = new Book();
-            book.setBarcode(code);
-            Result result = bookService.findBookByBarCode(book);
-            if (result.getCode() == 200) {
-                //System.out.println("ok");
-                //正确
-                Book book2 = (Book) result.getData();
-                Image image3 = new Image("E:\\Java\\LibraryManageSystem\\src\\main\\resources\\img\\database_source\\" + book2.getId() + ".jpg");
-
-                Platform.runLater(() -> {
-                    book_name.setText(book2.getName());
-                    book_author.setText(book2.getAuthor());
-                    book_view.setImage(image3);
-                });
-
-                //success.setText("借书成功");
-                return true;
-            }
-        }
-        return false;
+    private boolean recognizeFace() throws IOException {
+        String imageName = "E:\\Java\\LibraryManageSystem\\src\\main\\resources\\img\\1.jpg";
+        String imageBase64 = ImageUtil.convertImageToBase64Str(imageName);
+        return FaceUtil.faceMatch(imageBase64);
     }
 
 

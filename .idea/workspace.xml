@@ -8,33 +8,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c57b09d-6e38-463c-bc29-f2c4aafdf56e" name="更改" comment="优化代码结构">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/FaceUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/ImageUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/BookBorrowRenewalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/BookBorrowRenewalController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/BookReturnController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/BookReturnController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ButtonBarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ButtonBarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/impl/BookDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/impl/BookDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/impl/UserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/BarCodeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/BarCodeUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/DataSourceUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/DataSourceUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/FaceUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/FaceUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/img/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/img/1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/img/barPos.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/img/Pos.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/img/output.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/img/output.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controller/BookBorrowRenewalController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/BookBorrowRenewalController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/BookReturnController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/BookReturnController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/ButtonBarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/ButtonBarController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/impl/BookDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/impl/BookDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/impl/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/impl/UserDaoImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/img/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/img/1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/img/barPos.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/img/output.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/img/output.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/DataSourceUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/FaceUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/FaceUtil.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +179,7 @@
       <workItem from="1694504844121" duration="1239000" />
       <workItem from="1694571746353" duration="6000" />
       <workItem from="1694571762838" duration="7669000" />
-      <workItem from="1694584896444" duration="5443000" />
+      <workItem from="1694584896444" duration="7874000" />
     </task>
     <task id="LOCAL-00001" summary="upload">
       <option name="closed" value="true" />
@@ -535,7 +517,23 @@
       <option name="project" value="LOCAL" />
       <updated>1694574676815</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="优化代码结构">
+      <option name="closed" value="true" />
+      <created>1694590549661</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1694590549661</updated>
+    </task>
+    <task id="LOCAL-00044" summary="优化代码结构">
+      <option name="closed" value="true" />
+      <created>1694590566513</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1694590566514</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

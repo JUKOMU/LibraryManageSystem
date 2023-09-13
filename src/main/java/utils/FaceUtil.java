@@ -14,7 +14,7 @@ public class FaceUtil {
     public static void main(String []args) throws IOException {
         String imageName = "E:\\Java\\LibraryManageSystem\\src\\main\\resources\\img\\1.jpg";
         String imageBase64 = ImageUtil.convertImageToBase64Str(imageName);
-        faceDetect(imageBase64);
+        faceMatch(imageBase64);
     }
 
 
@@ -86,4 +86,16 @@ public class FaceUtil {
 
     }
 
+    public static boolean faceMatch(String image) throws IOException {
+        MediaType mediaType = MediaType.parse("application/json");
+        RequestBody body = RequestBody.create(mediaType, "{\"group_id_list\":\"1\",\"image\":\"" + image + "\",\"image_type\":\"BASE64\"}");
+        Request request = new Request.Builder()
+                .url("https://aip.baidubce.com/rest/2.0/face/v3/search?access_token=" + getAccessToken())
+                .method("POST", body)
+                .addHeader("Content-Type", "application/json")
+                .build();
+        Response response = HTTP_CLIENT.newCall(request).execute();
+        System.out.println(response.body().string());
+        return true;
+    }
 }
